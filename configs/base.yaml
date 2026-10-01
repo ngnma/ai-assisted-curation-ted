@@ -1,0 +1,30 @@
+project:
+  seed: 42
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  splits_dir: data/splits
+  vocab_dir: vocab
+  reports_dir: reports
+
+data:
+  kaggle_dataset: rounakbanik/ted-talks
+  raw_files: [ted_main.csv, transcripts.csv]
+  processed_file: talks.parquet
+
+splits:
+  strategy: temporal          # split by date, not randomly
+  date_column: published_date
+  train: 0.70
+  val: 0.15
+  test: 0.15
+
+vocab:
+  min_tag_freq: 10            # placeholder; we decide the final value after EDA
+
+llm:
+  provider: ollama
+  model: qwen2.5:7b           # fits 16 GB RAM
+  base_url: http://localhost:11434
+  temperature: 0.0            # 0 = most deterministic output
