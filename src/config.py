@@ -16,3 +16,6 @@ RAW_FILES = ["ted_main.csv", "transcripts.csv"]
 # Shared settings
 SEED = 42
 LLM_MODEL = "qwen2.5:7b"  # local open-weight model served by Ollama
+
+# data preprocessing settings
+MIN_TRANSCRIPT_WORDS = 300  # shorter "transcripts" are mostly music/performances
