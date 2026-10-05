@@ -1,29 +1,15 @@
-cat > .gitignore << 'EOF'
 # Python
 __pycache__/
-*.py[cod]
 .venv/
-*.egg-info/
-.pytest_cache/
-.ruff_cache/
-
-# Notebooks
 .ipynb_checkpoints/
 
-# Data: TED licence (CC BY-NC-ND) forbids redistribution
-data/*
-!data/splits/
-data/splits/*
-!data/splits/.gitkeep
-!data/splits/*.txt
+# Data: not redistributed (licence) - download it with src/download_data.py
+data/
 
-# Experiments, secrets, OS
-mlruns/
-mlartifacts/
+# Secrets and local files
 .env
 kaggle.json
 .DS_Store
-EOF
 
-
+# Private notes
 docs/QUADRA_AI_project.md

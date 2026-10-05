@@ -1,0 +1,5 @@
+# Python 3.11+
+pandas==3.0.6
+pyarrow==25.0.1
+kaggle==2.2.4
+ipykernel==7.4.0   # run notebooks in VS Code / Jupyter
