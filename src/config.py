@@ -27,3 +27,7 @@ EXCLUDED_TAGS = [  # TED event/programme labels, not subjects
     "tedx", "ted fellows", "ted brain trust", "ted prize", "tedyouth", "tedmed",
     "tednyc", "ted books", "ted en español", "ted residency", "ted-ed",
 ]
+# Phase 1: subject indexing
+SPLIT_FILE = PROCESSED_DIR / "splits.csv"
+SPLIT_RATIOS = {"train": 0.70, "val": 0.15, "test": 0.15}  # time-based: oldest -> newest
+EVAL_KS = [5, 10]  # score the top 5 and top 10 suggestions (test talks have ~12 tags, train ~6)

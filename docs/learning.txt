@@ -1,4 +1,4 @@
->> Phase 1: Create the tags Hierarchy
+>> Phase 0: Create the tags Hierarchy
 
 1.1. src/build_vocab.py 
 - Steps: 
