@@ -5,3 +5,5 @@ kaggle==2.2.4
 ipykernel==7.4.0   # run notebooks in VS Code / Jupyter
 matplotlib==3.11.2
 matplotlib-inline==0.2.2
+ollama==0.6.3
+rdflib==7.6.0

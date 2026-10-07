@@ -17,5 +17,13 @@ RAW_FILES = ["ted_main.csv", "transcripts.csv"]
 SEED = 42
 LLM_MODEL = "qwen2.5:7b"  # local open-weight model served by Ollama
 
-# data preprocessing settings
+# EDA settings
 MIN_TRANSCRIPT_WORDS = 300  # shorter "transcripts" are mostly music/performances
+
+# Vocabulary settings (from EDA)
+VOCAB_DIR = ROOT / "vocab"
+MIN_TAG_FREQ = 10
+EXCLUDED_TAGS = [  # TED event/programme labels, not subjects
+    "tedx", "ted fellows", "ted brain trust", "ted prize", "tedyouth", "tedmed",
+    "tednyc", "ted books", "ted en español", "ted residency", "ted-ed",
+]
