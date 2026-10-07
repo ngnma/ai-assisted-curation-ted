@@ -1,0 +1,1941 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://example.org/ted-thesaurus/tag/activism> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/social_justice_and_equality> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "activism"@en .
+
+<https://example.org/ted-thesaurus/tag/adventure> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/personal_growth_and_motivation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "adventure"@en .
+
+<https://example.org/ted-thesaurus/tag/africa> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "africa"@en .
+
+<https://example.org/ted-thesaurus/tag/aging> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "aging"@en .
+
+<https://example.org/ted-thesaurus/tag/agriculture> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "agriculture"@en .
+
+<https://example.org/ted-thesaurus/tag/ai> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "ai"@en .
+
+<https://example.org/ted-thesaurus/tag/aids> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "aids"@en .
+
+<https://example.org/ted-thesaurus/tag/algorithm> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "algorithm"@en .
+
+<https://example.org/ted-thesaurus/tag/alternative_energy> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "alternative energy"@en .
+
+<https://example.org/ted-thesaurus/tag/ancient_world> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/history_and_heritage> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "ancient world"@en .
+
+<https://example.org/ted-thesaurus/tag/animals> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/animals_and_biodiversity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "animals"@en .
+
+<https://example.org/ted-thesaurus/tag/animation> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "animation"@en .
+
+<https://example.org/ted-thesaurus/tag/anthropocene> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "anthropocene"@en .
+
+<https://example.org/ted-thesaurus/tag/anthropology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "anthropology"@en .
+
+<https://example.org/ted-thesaurus/tag/architecture> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "architecture"@en .
+
+<https://example.org/ted-thesaurus/tag/art> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "art"@en .
+
+<https://example.org/ted-thesaurus/tag/asia> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "asia"@en .
+
+<https://example.org/ted-thesaurus/tag/astrobiology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/space_and_astronomy> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "astrobiology"@en .
+
+<https://example.org/ted-thesaurus/tag/astronomy> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/space_and_astronomy> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "astronomy"@en .
+
+<https://example.org/ted-thesaurus/tag/autism_spectrum_disorder> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "autism spectrum disorder"@en .
+
+<https://example.org/ted-thesaurus/tag/bacteria> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "bacteria"@en .
+
+<https://example.org/ted-thesaurus/tag/beauty> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "beauty"@en .
+
+<https://example.org/ted-thesaurus/tag/bees> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/animals_and_biodiversity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "bees"@en .
+
+<https://example.org/ted-thesaurus/tag/behavioral_economics> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "behavioral economics"@en .
+
+<https://example.org/ted-thesaurus/tag/big_problems> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/global_issues_and_development> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "big problems"@en .
+
+<https://example.org/ted-thesaurus/tag/biodiversity> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/animals_and_biodiversity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "biodiversity"@en .
+
+<https://example.org/ted-thesaurus/tag/bioethics> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "bioethics"@en .
+
+<https://example.org/ted-thesaurus/tag/biology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "biology"@en .
+
+<https://example.org/ted-thesaurus/tag/biomechanics> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "biomechanics"@en .
+
+<https://example.org/ted-thesaurus/tag/biomimicry> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "biomimicry"@en .
+
+<https://example.org/ted-thesaurus/tag/biotech> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "biotech"@en .
+
+<https://example.org/ted-thesaurus/tag/birds> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/animals_and_biodiversity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "birds"@en .
+
+<https://example.org/ted-thesaurus/tag/blindness> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "blindness"@en .
+
+<https://example.org/ted-thesaurus/tag/body_language> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "body language"@en .
+
+<https://example.org/ted-thesaurus/tag/books> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/education_and_learning> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "books"@en .
+
+<https://example.org/ted-thesaurus/tag/botany> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "botany"@en .
+
+<https://example.org/ted-thesaurus/tag/brain> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "brain"@en .
+
+<https://example.org/ted-thesaurus/tag/brazil> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "brazil"@en .
+
+<https://example.org/ted-thesaurus/tag/business> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "business"@en .
+
+<https://example.org/ted-thesaurus/tag/cancer> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "cancer"@en .
+
+<https://example.org/ted-thesaurus/tag/capitalism> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "capitalism"@en .
+
+<https://example.org/ted-thesaurus/tag/cars> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "cars"@en .
+
+<https://example.org/ted-thesaurus/tag/chemistry> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "chemistry"@en .
+
+<https://example.org/ted-thesaurus/tag/children> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/education_and_learning> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "children"@en .
+
+<https://example.org/ted-thesaurus/tag/china> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "china"@en .
+
+<https://example.org/ted-thesaurus/tag/choice> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "choice"@en .
+
+<https://example.org/ted-thesaurus/tag/cities> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "cities"@en .
+
+<https://example.org/ted-thesaurus/tag/climate_change> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "climate change"@en .
+
+<https://example.org/ted-thesaurus/tag/code> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "code"@en .
+
+<https://example.org/ted-thesaurus/tag/cognitive_science> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "cognitive science"@en .
+
+<https://example.org/ted-thesaurus/tag/collaboration> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "collaboration"@en .
+
+<https://example.org/ted-thesaurus/tag/comedy> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "comedy"@en .
+
+<https://example.org/ted-thesaurus/tag/communication> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "communication"@en .
+
+<https://example.org/ted-thesaurus/tag/community> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "community"@en .
+
+<https://example.org/ted-thesaurus/tag/compassion> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "compassion"@en .
+
+<https://example.org/ted-thesaurus/tag/complexity> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "complexity"@en .
+
+<https://example.org/ted-thesaurus/tag/composing> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "composing"@en .
+
+<https://example.org/ted-thesaurus/tag/computers> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "computers"@en .
+
+<https://example.org/ted-thesaurus/tag/consciousness> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "consciousness"@en .
+
+<https://example.org/ted-thesaurus/tag/conservation> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environmental_conservation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "conservation"@en .
+
+<https://example.org/ted-thesaurus/tag/consumerism> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "consumerism"@en .
+
+<https://example.org/ted-thesaurus/tag/corruption> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "corruption"@en .
+
+<https://example.org/ted-thesaurus/tag/cosmos> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/space_and_astronomy> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "cosmos"@en .
+
+<https://example.org/ted-thesaurus/tag/creativity> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "creativity"@en .
+
+<https://example.org/ted-thesaurus/tag/crime> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "crime"@en .
+
+<https://example.org/ted-thesaurus/tag/criminal_justice> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "criminal justice"@en .
+
+<https://example.org/ted-thesaurus/tag/culture> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "culture"@en .
+
+<https://example.org/ted-thesaurus/tag/curiosity> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "curiosity"@en .
+
+<https://example.org/ted-thesaurus/tag/dance> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "dance"@en .
+
+<https://example.org/ted-thesaurus/tag/dark_matter> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "dark matter"@en .
+
+<https://example.org/ted-thesaurus/tag/data> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "data"@en .
+
+<https://example.org/ted-thesaurus/tag/death> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "death"@en .
+
+<https://example.org/ted-thesaurus/tag/decision-making> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "decision-making"@en .
+
+<https://example.org/ted-thesaurus/tag/demo> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "demo"@en .
+
+<https://example.org/ted-thesaurus/tag/democracy> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "democracy"@en .
+
+<https://example.org/ted-thesaurus/tag/depression> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "depression"@en .
+
+<https://example.org/ted-thesaurus/tag/design> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "design"@en .
+
+<https://example.org/ted-thesaurus/tag/dinosaurs> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "dinosaurs"@en .
+
+<https://example.org/ted-thesaurus/tag/disability> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "disability"@en .
+
+<https://example.org/ted-thesaurus/tag/disaster_relief> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "disaster relief"@en .
+
+<https://example.org/ted-thesaurus/tag/discovery> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "discovery"@en .
+
+<https://example.org/ted-thesaurus/tag/disease> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "disease"@en .
+
+<https://example.org/ted-thesaurus/tag/dna> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "dna"@en .
+
+<https://example.org/ted-thesaurus/tag/drones> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "drones"@en .
+
+<https://example.org/ted-thesaurus/tag/ebola> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "ebola"@en .
+
+<https://example.org/ted-thesaurus/tag/ecology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "ecology"@en .
+
+<https://example.org/ted-thesaurus/tag/economics> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "economics"@en .
+
+<https://example.org/ted-thesaurus/tag/education> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/education_and_learning> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "education"@en .
+
+<https://example.org/ted-thesaurus/tag/egypt> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/history_and_heritage> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "egypt"@en .
+
+<https://example.org/ted-thesaurus/tag/empathy> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "empathy"@en .
+
+<https://example.org/ted-thesaurus/tag/energy> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "energy"@en .
+
+<https://example.org/ted-thesaurus/tag/engineering> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "engineering"@en .
+
+<https://example.org/ted-thesaurus/tag/entertainment> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "entertainment"@en .
+
+<https://example.org/ted-thesaurus/tag/entrepreneur> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "entrepreneur"@en .
+
+<https://example.org/ted-thesaurus/tag/environment> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "environment"@en .
+
+<https://example.org/ted-thesaurus/tag/europe> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "europe"@en .
+
+<https://example.org/ted-thesaurus/tag/evolution> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "evolution"@en .
+
+<https://example.org/ted-thesaurus/tag/evolutionary_psychology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "evolutionary psychology"@en .
+
+<https://example.org/ted-thesaurus/tag/exploration> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "exploration"@en .
+
+<https://example.org/ted-thesaurus/tag/extraterrestrial_life> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/space_and_astronomy> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "extraterrestrial life"@en .
+
+<https://example.org/ted-thesaurus/tag/failure> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/personal_growth_and_motivation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "failure"@en .
+
+<https://example.org/ted-thesaurus/tag/faith> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "faith"@en .
+
+<https://example.org/ted-thesaurus/tag/family> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "family"@en .
+
+<https://example.org/ted-thesaurus/tag/farming> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "farming"@en .
+
+<https://example.org/ted-thesaurus/tag/fashion> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "fashion"@en .
+
+<https://example.org/ted-thesaurus/tag/fear> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "fear"@en .
+
+<https://example.org/ted-thesaurus/tag/feminism> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/social_justice_and_equality> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "feminism"@en .
+
+<https://example.org/ted-thesaurus/tag/film> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "film"@en .
+
+<https://example.org/ted-thesaurus/tag/finance> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "finance"@en .
+
+<https://example.org/ted-thesaurus/tag/fish> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/animals_and_biodiversity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "fish"@en .
+
+<https://example.org/ted-thesaurus/tag/flight> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/space_and_astronomy> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "flight"@en .
+
+<https://example.org/ted-thesaurus/tag/food> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "food"@en .
+
+<https://example.org/ted-thesaurus/tag/friendship> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "friendship"@en .
+
+<https://example.org/ted-thesaurus/tag/future> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "future"@en .
+
+<https://example.org/ted-thesaurus/tag/gaming> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "gaming"@en .
+
+<https://example.org/ted-thesaurus/tag/garden> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "garden"@en .
+
+<https://example.org/ted-thesaurus/tag/gender> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/social_justice_and_equality> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "gender"@en .
+
+<https://example.org/ted-thesaurus/tag/gender_equality> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/social_justice_and_equality> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "gender equality"@en .
+
+<https://example.org/ted-thesaurus/tag/genetics> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "genetics"@en .
+
+<https://example.org/ted-thesaurus/tag/global_development> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/global_issues_and_development> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "global development"@en .
+
+<https://example.org/ted-thesaurus/tag/global_issues> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/global_issues_and_development> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "global issues"@en .
+
+<https://example.org/ted-thesaurus/tag/goal-setting> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/personal_growth_and_motivation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "goal-setting"@en .
+
+<https://example.org/ted-thesaurus/tag/god> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "god"@en .
+
+<https://example.org/ted-thesaurus/tag/google> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "google"@en .
+
+<https://example.org/ted-thesaurus/tag/government> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "government"@en .
+
+<https://example.org/ted-thesaurus/tag/green> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "green"@en .
+
+<https://example.org/ted-thesaurus/tag/hack> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "hack"@en .
+
+<https://example.org/ted-thesaurus/tag/happiness> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "happiness"@en .
+
+<https://example.org/ted-thesaurus/tag/health> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "health"@en .
+
+<https://example.org/ted-thesaurus/tag/health_care> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "health care"@en .
+
+<https://example.org/ted-thesaurus/tag/heart_health> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "heart health"@en .
+
+<https://example.org/ted-thesaurus/tag/history> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/history_and_heritage> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "history"@en .
+
+<https://example.org/ted-thesaurus/tag/human_body> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "human body"@en .
+
+<https://example.org/ted-thesaurus/tag/human_origins> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/history_and_heritage> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "human origins"@en .
+
+<https://example.org/ted-thesaurus/tag/humanity> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "humanity"@en .
+
+<https://example.org/ted-thesaurus/tag/humor> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "humor"@en .
+
+<https://example.org/ted-thesaurus/tag/identity> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "identity"@en .
+
+<https://example.org/ted-thesaurus/tag/illness> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "illness"@en .
+
+<https://example.org/ted-thesaurus/tag/illusion> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "illusion"@en .
+
+<https://example.org/ted-thesaurus/tag/immigration> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/global_issues_and_development> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "immigration"@en .
+
+<https://example.org/ted-thesaurus/tag/india> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "india"@en .
+
+<https://example.org/ted-thesaurus/tag/industrial_design> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "industrial design"@en .
+
+<https://example.org/ted-thesaurus/tag/inequality> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/social_justice_and_equality> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "inequality"@en .
+
+<https://example.org/ted-thesaurus/tag/infrastructure> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/global_issues_and_development> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "infrastructure"@en .
+
+<https://example.org/ted-thesaurus/tag/innovation> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "innovation"@en .
+
+<https://example.org/ted-thesaurus/tag/insects> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/animals_and_biodiversity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "insects"@en .
+
+<https://example.org/ted-thesaurus/tag/intelligence> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "intelligence"@en .
+
+<https://example.org/ted-thesaurus/tag/interface_design> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "interface design"@en .
+
+<https://example.org/ted-thesaurus/tag/internet> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "internet"@en .
+
+<https://example.org/ted-thesaurus/tag/interview> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "interview"@en .
+
+<https://example.org/ted-thesaurus/tag/invention> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "invention"@en .
+
+<https://example.org/ted-thesaurus/tag/investment> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "investment"@en .
+
+<https://example.org/ted-thesaurus/tag/iraq> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "iraq"@en .
+
+<https://example.org/ted-thesaurus/tag/journalism> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "journalism"@en .
+
+<https://example.org/ted-thesaurus/tag/language> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/education_and_learning> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "language"@en .
+
+<https://example.org/ted-thesaurus/tag/law> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "law"@en .
+
+<https://example.org/ted-thesaurus/tag/leadership> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "leadership"@en .
+
+<https://example.org/ted-thesaurus/tag/lgbt> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/social_justice_and_equality> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "lgbt"@en .
+
+<https://example.org/ted-thesaurus/tag/library> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/education_and_learning> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "library"@en .
+
+<https://example.org/ted-thesaurus/tag/life> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/personal_growth_and_motivation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "life"@en .
+
+<https://example.org/ted-thesaurus/tag/literature> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/education_and_learning> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "literature"@en .
+
+<https://example.org/ted-thesaurus/tag/live_music> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "live music"@en .
+
+<https://example.org/ted-thesaurus/tag/love> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "love"@en .
+
+<https://example.org/ted-thesaurus/tag/macarthur_grant> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/education_and_learning> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "macarthur grant"@en .
+
+<https://example.org/ted-thesaurus/tag/machine_learning> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "machine learning"@en .
+
+<https://example.org/ted-thesaurus/tag/magic> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "magic"@en .
+
+<https://example.org/ted-thesaurus/tag/manufacturing> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "manufacturing"@en .
+
+<https://example.org/ted-thesaurus/tag/map> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "map"@en .
+
+<https://example.org/ted-thesaurus/tag/marketing> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "marketing"@en .
+
+<https://example.org/ted-thesaurus/tag/mars> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/space_and_astronomy> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "mars"@en .
+
+<https://example.org/ted-thesaurus/tag/materials> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "materials"@en .
+
+<https://example.org/ted-thesaurus/tag/math> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "math"@en .
+
+<https://example.org/ted-thesaurus/tag/media> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "media"@en .
+
+<https://example.org/ted-thesaurus/tag/medical_imaging> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "medical imaging"@en .
+
+<https://example.org/ted-thesaurus/tag/medical_research> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "medical research"@en .
+
+<https://example.org/ted-thesaurus/tag/medicine> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "medicine"@en .
+
+<https://example.org/ted-thesaurus/tag/memory> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "memory"@en .
+
+<https://example.org/ted-thesaurus/tag/mental_health> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "mental health"@en .
+
+<https://example.org/ted-thesaurus/tag/microbes> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/animals_and_biodiversity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "microbes"@en .
+
+<https://example.org/ted-thesaurus/tag/microbiology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "microbiology"@en .
+
+<https://example.org/ted-thesaurus/tag/middle_east> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "middle east"@en .
+
+<https://example.org/ted-thesaurus/tag/military> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "military"@en .
+
+<https://example.org/ted-thesaurus/tag/mind> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "mind"@en .
+
+<https://example.org/ted-thesaurus/tag/mission_blue> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environmental_conservation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "mission blue"@en .
+
+<https://example.org/ted-thesaurus/tag/molecular_biology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "molecular biology"@en .
+
+<https://example.org/ted-thesaurus/tag/money> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "money"@en .
+
+<https://example.org/ted-thesaurus/tag/morality> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/Human_Behavior_and_Psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "morality"@en .
+
+<https://example.org/ted-thesaurus/tag/motivation> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/personal_growth_and_motivation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "motivation"@en .
+
+<https://example.org/ted-thesaurus/tag/movies> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "movies"@en .
+
+<https://example.org/ted-thesaurus/tag/museums> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/education_and_learning> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "museums"@en .
+
+<https://example.org/ted-thesaurus/tag/music> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "music"@en .
+
+<https://example.org/ted-thesaurus/tag/nanoscale> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "nanoscale"@en .
+
+<https://example.org/ted-thesaurus/tag/nasa> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/space_and_astronomy> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "nasa"@en .
+
+<https://example.org/ted-thesaurus/tag/natural_disaster> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "natural disaster"@en .
+
+<https://example.org/ted-thesaurus/tag/natural_resources> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environmental_conservation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "natural resources"@en .
+
+<https://example.org/ted-thesaurus/tag/nature> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "nature"@en .
+
+<https://example.org/ted-thesaurus/tag/neuroscience> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "neuroscience"@en .
+
+<https://example.org/ted-thesaurus/tag/news> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "news"@en .
+
+<https://example.org/ted-thesaurus/tag/obesity> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "obesity"@en .
+
+<https://example.org/ted-thesaurus/tag/oceans> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environmental_conservation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "oceans"@en .
+
+<https://example.org/ted-thesaurus/tag/online_video> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "online video"@en .
+
+<https://example.org/ted-thesaurus/tag/open-source> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "open-source"@en .
+
+<https://example.org/ted-thesaurus/tag/paleontology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "paleontology"@en .
+
+<https://example.org/ted-thesaurus/tag/parenting> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "parenting"@en .
+
+<https://example.org/ted-thesaurus/tag/peace> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/global_issues_and_development> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "peace"@en .
+
+<https://example.org/ted-thesaurus/tag/performance> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "performance"@en .
+
+<https://example.org/ted-thesaurus/tag/performance_art> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "performance art"@en .
+
+<https://example.org/ted-thesaurus/tag/personal_growth> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/personal_growth_and_motivation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "personal growth"@en .
+
+<https://example.org/ted-thesaurus/tag/personality> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "personality"@en .
+
+<https://example.org/ted-thesaurus/tag/pharmaceuticals> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "pharmaceuticals"@en .
+
+<https://example.org/ted-thesaurus/tag/philanthropy> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/global_issues_and_development> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "philanthropy"@en .
+
+<https://example.org/ted-thesaurus/tag/philosophy> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "philosophy"@en .
+
+<https://example.org/ted-thesaurus/tag/photography> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "photography"@en .
+
+<https://example.org/ted-thesaurus/tag/physics> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "physics"@en .
+
+<https://example.org/ted-thesaurus/tag/physiology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "physiology"@en .
+
+<https://example.org/ted-thesaurus/tag/piano> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "piano"@en .
+
+<https://example.org/ted-thesaurus/tag/planets> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/space_and_astronomy> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "planets"@en .
+
+<https://example.org/ted-thesaurus/tag/plants> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "plants"@en .
+
+<https://example.org/ted-thesaurus/tag/plastic> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environmental_conservation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "plastic"@en .
+
+<https://example.org/ted-thesaurus/tag/play> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/Human_Behavior_and_Psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "play"@en .
+
+<https://example.org/ted-thesaurus/tag/poetry> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "poetry"@en .
+
+<https://example.org/ted-thesaurus/tag/policy> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "policy"@en .
+
+<https://example.org/ted-thesaurus/tag/politics> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "politics"@en .
+
+<https://example.org/ted-thesaurus/tag/pollution> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environmental_conservation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "pollution"@en .
+
+<https://example.org/ted-thesaurus/tag/population> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/global_issues_and_development> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "population"@en .
+
+<https://example.org/ted-thesaurus/tag/potential> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "potential"@en .
+
+<https://example.org/ted-thesaurus/tag/poverty> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/global_issues_and_development> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "poverty"@en .
+
+<https://example.org/ted-thesaurus/tag/prediction> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "prediction"@en .
+
+<https://example.org/ted-thesaurus/tag/presentation> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "presentation"@en .
+
+<https://example.org/ted-thesaurus/tag/prison> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "prison"@en .
+
+<https://example.org/ted-thesaurus/tag/privacy> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "privacy"@en .
+
+<https://example.org/ted-thesaurus/tag/product_design> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "product design"@en .
+
+<https://example.org/ted-thesaurus/tag/productivity> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/personal_growth_and_motivation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "productivity"@en .
+
+<https://example.org/ted-thesaurus/tag/programming> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "programming"@en .
+
+<https://example.org/ted-thesaurus/tag/prosthetics> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "prosthetics"@en .
+
+<https://example.org/ted-thesaurus/tag/protests> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "protests"@en .
+
+<https://example.org/ted-thesaurus/tag/psychology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "psychology"@en .
+
+<https://example.org/ted-thesaurus/tag/ptsd> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "ptsd"@en .
+
+<https://example.org/ted-thesaurus/tag/public_health> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "public health"@en .
+
+<https://example.org/ted-thesaurus/tag/public_spaces> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "public spaces"@en .
+
+<https://example.org/ted-thesaurus/tag/race> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "race"@en .
+
+<https://example.org/ted-thesaurus/tag/refugees> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/global_issues_and_development> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "refugees"@en .
+
+<https://example.org/ted-thesaurus/tag/relationships> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "relationships"@en .
+
+<https://example.org/ted-thesaurus/tag/religion> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "religion"@en .
+
+<https://example.org/ted-thesaurus/tag/robots> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "robots"@en .
+
+<https://example.org/ted-thesaurus/tag/sanitation> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "sanitation"@en .
+
+<https://example.org/ted-thesaurus/tag/science> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "science"@en .
+
+<https://example.org/ted-thesaurus/tag/science_and_art> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "science and art"@en .
+
+<https://example.org/ted-thesaurus/tag/security> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "security"@en .
+
+<https://example.org/ted-thesaurus/tag/self> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/personal_growth_and_motivation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "self"@en .
+
+<https://example.org/ted-thesaurus/tag/senses> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "senses"@en .
+
+<https://example.org/ted-thesaurus/tag/sex> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/Human_Behavior_and_Psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "sex"@en .
+
+<https://example.org/ted-thesaurus/tag/sexual_violence> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "sexual violence"@en .
+
+<https://example.org/ted-thesaurus/tag/sight> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "sight"@en .
+
+<https://example.org/ted-thesaurus/tag/simplicity> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "simplicity"@en .
+
+<https://example.org/ted-thesaurus/tag/slavery> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "slavery"@en .
+
+<https://example.org/ted-thesaurus/tag/social_change> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/social_justice_and_equality> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "social change"@en .
+
+<https://example.org/ted-thesaurus/tag/social_media> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "social media"@en .
+
+<https://example.org/ted-thesaurus/tag/society> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "society"@en .
+
+<https://example.org/ted-thesaurus/tag/sociology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "sociology"@en .
+
+<https://example.org/ted-thesaurus/tag/software> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "software"@en .
+
+<https://example.org/ted-thesaurus/tag/solar_energy> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "solar energy"@en .
+
+<https://example.org/ted-thesaurus/tag/solar_system> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/space_and_astronomy> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "solar system"@en .
+
+<https://example.org/ted-thesaurus/tag/sound> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "sound"@en .
+
+<https://example.org/ted-thesaurus/tag/south_america> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "south america"@en .
+
+<https://example.org/ted-thesaurus/tag/space> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/space_and_astronomy> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "space"@en .
+
+<https://example.org/ted-thesaurus/tag/speech> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "speech"@en .
+
+<https://example.org/ted-thesaurus/tag/spoken_word> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "spoken word"@en .
+
+<https://example.org/ted-thesaurus/tag/sports> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "sports"@en .
+
+<https://example.org/ted-thesaurus/tag/statistics> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "statistics"@en .
+
+<https://example.org/ted-thesaurus/tag/storytelling> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "storytelling"@en .
+
+<https://example.org/ted-thesaurus/tag/success> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/personal_growth_and_motivation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "success"@en .
+
+<https://example.org/ted-thesaurus/tag/surgery> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "surgery"@en .
+
+<https://example.org/ted-thesaurus/tag/surveillance> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "surveillance"@en .
+
+<https://example.org/ted-thesaurus/tag/sustainability> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "sustainability"@en .
+
+<https://example.org/ted-thesaurus/tag/synthetic_biology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/science_and_exploration> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "synthetic biology"@en .
+
+<https://example.org/ted-thesaurus/tag/teaching> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/education_and_learning> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "teaching"@en .
+
+<https://example.org/ted-thesaurus/tag/technology> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "technology"@en .
+
+<https://example.org/ted-thesaurus/tag/telescopes> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "telescopes"@en .
+
+<https://example.org/ted-thesaurus/tag/terrorism> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/politics_and_governance> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "terrorism"@en .
+
+<https://example.org/ted-thesaurus/tag/theater> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "theater"@en .
+
+<https://example.org/ted-thesaurus/tag/time> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "time"@en .
+
+<https://example.org/ted-thesaurus/tag/toy> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/art_and_creativity> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "toy"@en .
+
+<https://example.org/ted-thesaurus/tag/transportation> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "transportation"@en .
+
+<https://example.org/ted-thesaurus/tag/travel> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "travel"@en .
+
+<https://example.org/ted-thesaurus/tag/trees> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "trees"@en .
+
+<https://example.org/ted-thesaurus/tag/trust> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/emotions_and_relationships> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "trust"@en .
+
+<https://example.org/ted-thesaurus/tag/united_states> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "united states"@en .
+
+<https://example.org/ted-thesaurus/tag/universe> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/space_and_astronomy> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "universe"@en .
+
+<https://example.org/ted-thesaurus/tag/urban_planning> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "urban planning"@en .
+
+<https://example.org/ted-thesaurus/tag/vaccines> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "vaccines"@en .
+
+<https://example.org/ted-thesaurus/tag/violence> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/global_issues_and_development> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "violence"@en .
+
+<https://example.org/ted-thesaurus/tag/virtual_reality> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "virtual reality"@en .
+
+<https://example.org/ted-thesaurus/tag/virus> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/health_and_medicine> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "virus"@en .
+
+<https://example.org/ted-thesaurus/tag/visualizations> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "visualizations"@en .
+
+<https://example.org/ted-thesaurus/tag/war> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/global_issues_and_development> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "war"@en .
+
+<https://example.org/ted-thesaurus/tag/water> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "water"@en .
+
+<https://example.org/ted-thesaurus/tag/weather> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/environment_and_ecology> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "weather"@en .
+
+<https://example.org/ted-thesaurus/tag/web> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/technology_and_innovation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "web"@en .
+
+<https://example.org/ted-thesaurus/tag/women> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/social_justice_and_equality> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "women"@en .
+
+<https://example.org/ted-thesaurus/tag/women_in_business> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "women in business"@en .
+
+<https://example.org/ted-thesaurus/tag/work> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/business_and_economics> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "work"@en .
+
+<https://example.org/ted-thesaurus/tag/work-life_balance> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/personal_growth_and_motivation> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "work-life balance"@en .
+
+<https://example.org/ted-thesaurus/tag/world_cultures> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "world cultures"@en .
+
+<https://example.org/ted-thesaurus/tag/writing> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/communication_and_media> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "writing"@en .
+
+<https://example.org/ted-thesaurus/tag/youth> a skos:Concept ;
+    skos:broader <https://example.org/ted-thesaurus/group/society_and_culture> ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:prefLabel "youth"@en .
+
+<https://example.org/ted-thesaurus/group/Human_Behavior_and_Psychology> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/morality>,
+        <https://example.org/ted-thesaurus/tag/play>,
+        <https://example.org/ted-thesaurus/tag/sex> ;
+    skos:prefLabel "Human Behavior and Psychology"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/history_and_heritage> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/ancient_world>,
+        <https://example.org/ted-thesaurus/tag/egypt>,
+        <https://example.org/ted-thesaurus/tag/history>,
+        <https://example.org/ted-thesaurus/tag/human_origins> ;
+    skos:prefLabel "history and heritage"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/environmental_conservation> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/conservation>,
+        <https://example.org/ted-thesaurus/tag/mission_blue>,
+        <https://example.org/ted-thesaurus/tag/natural_resources>,
+        <https://example.org/ted-thesaurus/tag/oceans>,
+        <https://example.org/ted-thesaurus/tag/plastic>,
+        <https://example.org/ted-thesaurus/tag/pollution> ;
+    skos:prefLabel "environmental conservation"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/animals_and_biodiversity> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/animals>,
+        <https://example.org/ted-thesaurus/tag/bees>,
+        <https://example.org/ted-thesaurus/tag/biodiversity>,
+        <https://example.org/ted-thesaurus/tag/birds>,
+        <https://example.org/ted-thesaurus/tag/fish>,
+        <https://example.org/ted-thesaurus/tag/insects>,
+        <https://example.org/ted-thesaurus/tag/microbes> ;
+    skos:prefLabel "animals and biodiversity"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/social_justice_and_equality> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/activism>,
+        <https://example.org/ted-thesaurus/tag/feminism>,
+        <https://example.org/ted-thesaurus/tag/gender>,
+        <https://example.org/ted-thesaurus/tag/gender_equality>,
+        <https://example.org/ted-thesaurus/tag/inequality>,
+        <https://example.org/ted-thesaurus/tag/lgbt>,
+        <https://example.org/ted-thesaurus/tag/social_change>,
+        <https://example.org/ted-thesaurus/tag/women> ;
+    skos:prefLabel "social justice and equality"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/education_and_learning> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/books>,
+        <https://example.org/ted-thesaurus/tag/children>,
+        <https://example.org/ted-thesaurus/tag/education>,
+        <https://example.org/ted-thesaurus/tag/language>,
+        <https://example.org/ted-thesaurus/tag/library>,
+        <https://example.org/ted-thesaurus/tag/literature>,
+        <https://example.org/ted-thesaurus/tag/macarthur_grant>,
+        <https://example.org/ted-thesaurus/tag/museums>,
+        <https://example.org/ted-thesaurus/tag/teaching> ;
+    skos:prefLabel "education and learning"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/personal_growth_and_motivation> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/adventure>,
+        <https://example.org/ted-thesaurus/tag/failure>,
+        <https://example.org/ted-thesaurus/tag/goal-setting>,
+        <https://example.org/ted-thesaurus/tag/life>,
+        <https://example.org/ted-thesaurus/tag/motivation>,
+        <https://example.org/ted-thesaurus/tag/personal_growth>,
+        <https://example.org/ted-thesaurus/tag/productivity>,
+        <https://example.org/ted-thesaurus/tag/self>,
+        <https://example.org/ted-thesaurus/tag/success>,
+        <https://example.org/ted-thesaurus/tag/work-life_balance> ;
+    skos:prefLabel "personal growth and motivation"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/space_and_astronomy> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/astrobiology>,
+        <https://example.org/ted-thesaurus/tag/astronomy>,
+        <https://example.org/ted-thesaurus/tag/cosmos>,
+        <https://example.org/ted-thesaurus/tag/extraterrestrial_life>,
+        <https://example.org/ted-thesaurus/tag/flight>,
+        <https://example.org/ted-thesaurus/tag/mars>,
+        <https://example.org/ted-thesaurus/tag/nasa>,
+        <https://example.org/ted-thesaurus/tag/planets>,
+        <https://example.org/ted-thesaurus/tag/solar_system>,
+        <https://example.org/ted-thesaurus/tag/space>,
+        <https://example.org/ted-thesaurus/tag/universe> ;
+    skos:prefLabel "space and astronomy"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/global_issues_and_development> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/big_problems>,
+        <https://example.org/ted-thesaurus/tag/global_development>,
+        <https://example.org/ted-thesaurus/tag/global_issues>,
+        <https://example.org/ted-thesaurus/tag/immigration>,
+        <https://example.org/ted-thesaurus/tag/infrastructure>,
+        <https://example.org/ted-thesaurus/tag/peace>,
+        <https://example.org/ted-thesaurus/tag/philanthropy>,
+        <https://example.org/ted-thesaurus/tag/population>,
+        <https://example.org/ted-thesaurus/tag/poverty>,
+        <https://example.org/ted-thesaurus/tag/refugees>,
+        <https://example.org/ted-thesaurus/tag/violence>,
+        <https://example.org/ted-thesaurus/tag/war> ;
+    skos:prefLabel "global issues and development"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/politics_and_governance> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/corruption>,
+        <https://example.org/ted-thesaurus/tag/crime>,
+        <https://example.org/ted-thesaurus/tag/criminal_justice>,
+        <https://example.org/ted-thesaurus/tag/democracy>,
+        <https://example.org/ted-thesaurus/tag/government>,
+        <https://example.org/ted-thesaurus/tag/law>,
+        <https://example.org/ted-thesaurus/tag/military>,
+        <https://example.org/ted-thesaurus/tag/policy>,
+        <https://example.org/ted-thesaurus/tag/politics>,
+        <https://example.org/ted-thesaurus/tag/protests>,
+        <https://example.org/ted-thesaurus/tag/security>,
+        <https://example.org/ted-thesaurus/tag/surveillance>,
+        <https://example.org/ted-thesaurus/tag/terrorism> ;
+    skos:prefLabel "politics and governance"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/business_and_economics> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/behavioral_economics>,
+        <https://example.org/ted-thesaurus/tag/business>,
+        <https://example.org/ted-thesaurus/tag/capitalism>,
+        <https://example.org/ted-thesaurus/tag/consumerism>,
+        <https://example.org/ted-thesaurus/tag/economics>,
+        <https://example.org/ted-thesaurus/tag/entrepreneur>,
+        <https://example.org/ted-thesaurus/tag/finance>,
+        <https://example.org/ted-thesaurus/tag/investment>,
+        <https://example.org/ted-thesaurus/tag/leadership>,
+        <https://example.org/ted-thesaurus/tag/manufacturing>,
+        <https://example.org/ted-thesaurus/tag/marketing>,
+        <https://example.org/ted-thesaurus/tag/money>,
+        <https://example.org/ted-thesaurus/tag/statistics>,
+        <https://example.org/ted-thesaurus/tag/women_in_business>,
+        <https://example.org/ted-thesaurus/tag/work> ;
+    skos:prefLabel "business and economics"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/emotions_and_relationships> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/collaboration>,
+        <https://example.org/ted-thesaurus/tag/compassion>,
+        <https://example.org/ted-thesaurus/tag/death>,
+        <https://example.org/ted-thesaurus/tag/depression>,
+        <https://example.org/ted-thesaurus/tag/empathy>,
+        <https://example.org/ted-thesaurus/tag/family>,
+        <https://example.org/ted-thesaurus/tag/fear>,
+        <https://example.org/ted-thesaurus/tag/friendship>,
+        <https://example.org/ted-thesaurus/tag/god>,
+        <https://example.org/ted-thesaurus/tag/happiness>,
+        <https://example.org/ted-thesaurus/tag/humor>,
+        <https://example.org/ted-thesaurus/tag/identity>,
+        <https://example.org/ted-thesaurus/tag/love>,
+        <https://example.org/ted-thesaurus/tag/relationships>,
+        <https://example.org/ted-thesaurus/tag/trust> ;
+    skos:prefLabel "emotions and relationships"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/communication_and_media> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/communication>,
+        <https://example.org/ted-thesaurus/tag/entertainment>,
+        <https://example.org/ted-thesaurus/tag/film>,
+        <https://example.org/ted-thesaurus/tag/gaming>,
+        <https://example.org/ted-thesaurus/tag/interview>,
+        <https://example.org/ted-thesaurus/tag/journalism>,
+        <https://example.org/ted-thesaurus/tag/media>,
+        <https://example.org/ted-thesaurus/tag/news>,
+        <https://example.org/ted-thesaurus/tag/online_video>,
+        <https://example.org/ted-thesaurus/tag/presentation>,
+        <https://example.org/ted-thesaurus/tag/social_media>,
+        <https://example.org/ted-thesaurus/tag/speech>,
+        <https://example.org/ted-thesaurus/tag/spoken_word>,
+        <https://example.org/ted-thesaurus/tag/storytelling>,
+        <https://example.org/ted-thesaurus/tag/visualizations>,
+        <https://example.org/ted-thesaurus/tag/writing> ;
+    skos:prefLabel "communication and media"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/art_and_creativity> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/animation>,
+        <https://example.org/ted-thesaurus/tag/art>,
+        <https://example.org/ted-thesaurus/tag/beauty>,
+        <https://example.org/ted-thesaurus/tag/comedy>,
+        <https://example.org/ted-thesaurus/tag/composing>,
+        <https://example.org/ted-thesaurus/tag/creativity>,
+        <https://example.org/ted-thesaurus/tag/dance>,
+        <https://example.org/ted-thesaurus/tag/design>,
+        <https://example.org/ted-thesaurus/tag/fashion>,
+        <https://example.org/ted-thesaurus/tag/live_music>,
+        <https://example.org/ted-thesaurus/tag/magic>,
+        <https://example.org/ted-thesaurus/tag/movies>,
+        <https://example.org/ted-thesaurus/tag/music>,
+        <https://example.org/ted-thesaurus/tag/performance>,
+        <https://example.org/ted-thesaurus/tag/performance_art>,
+        <https://example.org/ted-thesaurus/tag/photography>,
+        <https://example.org/ted-thesaurus/tag/piano>,
+        <https://example.org/ted-thesaurus/tag/poetry>,
+        <https://example.org/ted-thesaurus/tag/science_and_art>,
+        <https://example.org/ted-thesaurus/tag/simplicity>,
+        <https://example.org/ted-thesaurus/tag/theater>,
+        <https://example.org/ted-thesaurus/tag/toy> ;
+    skos:prefLabel "art and creativity"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/human_behavior_and_psychology> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/anthropology>,
+        <https://example.org/ted-thesaurus/tag/body_language>,
+        <https://example.org/ted-thesaurus/tag/brain>,
+        <https://example.org/ted-thesaurus/tag/choice>,
+        <https://example.org/ted-thesaurus/tag/cognitive_science>,
+        <https://example.org/ted-thesaurus/tag/complexity>,
+        <https://example.org/ted-thesaurus/tag/consciousness>,
+        <https://example.org/ted-thesaurus/tag/curiosity>,
+        <https://example.org/ted-thesaurus/tag/decision-making>,
+        <https://example.org/ted-thesaurus/tag/evolutionary_psychology>,
+        <https://example.org/ted-thesaurus/tag/illusion>,
+        <https://example.org/ted-thesaurus/tag/intelligence>,
+        <https://example.org/ted-thesaurus/tag/memory>,
+        <https://example.org/ted-thesaurus/tag/mind>,
+        <https://example.org/ted-thesaurus/tag/neuroscience>,
+        <https://example.org/ted-thesaurus/tag/personality>,
+        <https://example.org/ted-thesaurus/tag/psychology>,
+        <https://example.org/ted-thesaurus/tag/race>,
+        <https://example.org/ted-thesaurus/tag/senses>,
+        <https://example.org/ted-thesaurus/tag/sexual_violence>,
+        <https://example.org/ted-thesaurus/tag/sight>,
+        <https://example.org/ted-thesaurus/tag/slavery>,
+        <https://example.org/ted-thesaurus/tag/sound> ;
+    skos:prefLabel "human behavior and psychology"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/science_and_exploration> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/biology>,
+        <https://example.org/ted-thesaurus/tag/biomechanics>,
+        <https://example.org/ted-thesaurus/tag/biomimicry>,
+        <https://example.org/ted-thesaurus/tag/biotech>,
+        <https://example.org/ted-thesaurus/tag/chemistry>,
+        <https://example.org/ted-thesaurus/tag/dark_matter>,
+        <https://example.org/ted-thesaurus/tag/dinosaurs>,
+        <https://example.org/ted-thesaurus/tag/discovery>,
+        <https://example.org/ted-thesaurus/tag/dna>,
+        <https://example.org/ted-thesaurus/tag/evolution>,
+        <https://example.org/ted-thesaurus/tag/exploration>,
+        <https://example.org/ted-thesaurus/tag/genetics>,
+        <https://example.org/ted-thesaurus/tag/materials>,
+        <https://example.org/ted-thesaurus/tag/math>,
+        <https://example.org/ted-thesaurus/tag/microbiology>,
+        <https://example.org/ted-thesaurus/tag/molecular_biology>,
+        <https://example.org/ted-thesaurus/tag/nanoscale>,
+        <https://example.org/ted-thesaurus/tag/paleontology>,
+        <https://example.org/ted-thesaurus/tag/physics>,
+        <https://example.org/ted-thesaurus/tag/potential>,
+        <https://example.org/ted-thesaurus/tag/prediction>,
+        <https://example.org/ted-thesaurus/tag/science>,
+        <https://example.org/ted-thesaurus/tag/synthetic_biology> ;
+    skos:prefLabel "science and exploration"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/environment_and_ecology> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/agriculture>,
+        <https://example.org/ted-thesaurus/tag/alternative_energy>,
+        <https://example.org/ted-thesaurus/tag/anthropocene>,
+        <https://example.org/ted-thesaurus/tag/architecture>,
+        <https://example.org/ted-thesaurus/tag/botany>,
+        <https://example.org/ted-thesaurus/tag/climate_change>,
+        <https://example.org/ted-thesaurus/tag/ecology>,
+        <https://example.org/ted-thesaurus/tag/energy>,
+        <https://example.org/ted-thesaurus/tag/environment>,
+        <https://example.org/ted-thesaurus/tag/farming>,
+        <https://example.org/ted-thesaurus/tag/food>,
+        <https://example.org/ted-thesaurus/tag/garden>,
+        <https://example.org/ted-thesaurus/tag/green>,
+        <https://example.org/ted-thesaurus/tag/map>,
+        <https://example.org/ted-thesaurus/tag/natural_disaster>,
+        <https://example.org/ted-thesaurus/tag/nature>,
+        <https://example.org/ted-thesaurus/tag/plants>,
+        <https://example.org/ted-thesaurus/tag/solar_energy>,
+        <https://example.org/ted-thesaurus/tag/sustainability>,
+        <https://example.org/ted-thesaurus/tag/time>,
+        <https://example.org/ted-thesaurus/tag/trees>,
+        <https://example.org/ted-thesaurus/tag/urban_planning>,
+        <https://example.org/ted-thesaurus/tag/water>,
+        <https://example.org/ted-thesaurus/tag/weather> ;
+    skos:prefLabel "environment and ecology"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/society_and_culture> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/africa>,
+        <https://example.org/ted-thesaurus/tag/asia>,
+        <https://example.org/ted-thesaurus/tag/brazil>,
+        <https://example.org/ted-thesaurus/tag/china>,
+        <https://example.org/ted-thesaurus/tag/cities>,
+        <https://example.org/ted-thesaurus/tag/community>,
+        <https://example.org/ted-thesaurus/tag/culture>,
+        <https://example.org/ted-thesaurus/tag/europe>,
+        <https://example.org/ted-thesaurus/tag/faith>,
+        <https://example.org/ted-thesaurus/tag/humanity>,
+        <https://example.org/ted-thesaurus/tag/india>,
+        <https://example.org/ted-thesaurus/tag/iraq>,
+        <https://example.org/ted-thesaurus/tag/middle_east>,
+        <https://example.org/ted-thesaurus/tag/parenting>,
+        <https://example.org/ted-thesaurus/tag/philosophy>,
+        <https://example.org/ted-thesaurus/tag/prison>,
+        <https://example.org/ted-thesaurus/tag/public_spaces>,
+        <https://example.org/ted-thesaurus/tag/religion>,
+        <https://example.org/ted-thesaurus/tag/society>,
+        <https://example.org/ted-thesaurus/tag/sociology>,
+        <https://example.org/ted-thesaurus/tag/south_america>,
+        <https://example.org/ted-thesaurus/tag/sports>,
+        <https://example.org/ted-thesaurus/tag/travel>,
+        <https://example.org/ted-thesaurus/tag/united_states>,
+        <https://example.org/ted-thesaurus/tag/world_cultures>,
+        <https://example.org/ted-thesaurus/tag/youth> ;
+    skos:prefLabel "society and culture"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/technology_and_innovation> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/ai>,
+        <https://example.org/ted-thesaurus/tag/algorithm>,
+        <https://example.org/ted-thesaurus/tag/cars>,
+        <https://example.org/ted-thesaurus/tag/code>,
+        <https://example.org/ted-thesaurus/tag/computers>,
+        <https://example.org/ted-thesaurus/tag/data>,
+        <https://example.org/ted-thesaurus/tag/demo>,
+        <https://example.org/ted-thesaurus/tag/drones>,
+        <https://example.org/ted-thesaurus/tag/engineering>,
+        <https://example.org/ted-thesaurus/tag/future>,
+        <https://example.org/ted-thesaurus/tag/google>,
+        <https://example.org/ted-thesaurus/tag/hack>,
+        <https://example.org/ted-thesaurus/tag/industrial_design>,
+        <https://example.org/ted-thesaurus/tag/innovation>,
+        <https://example.org/ted-thesaurus/tag/interface_design>,
+        <https://example.org/ted-thesaurus/tag/internet>,
+        <https://example.org/ted-thesaurus/tag/invention>,
+        <https://example.org/ted-thesaurus/tag/machine_learning>,
+        <https://example.org/ted-thesaurus/tag/open-source>,
+        <https://example.org/ted-thesaurus/tag/privacy>,
+        <https://example.org/ted-thesaurus/tag/product_design>,
+        <https://example.org/ted-thesaurus/tag/programming>,
+        <https://example.org/ted-thesaurus/tag/robots>,
+        <https://example.org/ted-thesaurus/tag/software>,
+        <https://example.org/ted-thesaurus/tag/technology>,
+        <https://example.org/ted-thesaurus/tag/telescopes>,
+        <https://example.org/ted-thesaurus/tag/transportation>,
+        <https://example.org/ted-thesaurus/tag/virtual_reality>,
+        <https://example.org/ted-thesaurus/tag/web> ;
+    skos:prefLabel "technology and innovation"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/health_and_medicine> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/aging>,
+        <https://example.org/ted-thesaurus/tag/aids>,
+        <https://example.org/ted-thesaurus/tag/autism_spectrum_disorder>,
+        <https://example.org/ted-thesaurus/tag/bacteria>,
+        <https://example.org/ted-thesaurus/tag/bioethics>,
+        <https://example.org/ted-thesaurus/tag/blindness>,
+        <https://example.org/ted-thesaurus/tag/cancer>,
+        <https://example.org/ted-thesaurus/tag/disability>,
+        <https://example.org/ted-thesaurus/tag/disaster_relief>,
+        <https://example.org/ted-thesaurus/tag/disease>,
+        <https://example.org/ted-thesaurus/tag/ebola>,
+        <https://example.org/ted-thesaurus/tag/health>,
+        <https://example.org/ted-thesaurus/tag/health_care>,
+        <https://example.org/ted-thesaurus/tag/heart_health>,
+        <https://example.org/ted-thesaurus/tag/human_body>,
+        <https://example.org/ted-thesaurus/tag/illness>,
+        <https://example.org/ted-thesaurus/tag/medical_imaging>,
+        <https://example.org/ted-thesaurus/tag/medical_research>,
+        <https://example.org/ted-thesaurus/tag/medicine>,
+        <https://example.org/ted-thesaurus/tag/mental_health>,
+        <https://example.org/ted-thesaurus/tag/obesity>,
+        <https://example.org/ted-thesaurus/tag/pharmaceuticals>,
+        <https://example.org/ted-thesaurus/tag/physiology>,
+        <https://example.org/ted-thesaurus/tag/prosthetics>,
+        <https://example.org/ted-thesaurus/tag/ptsd>,
+        <https://example.org/ted-thesaurus/tag/public_health>,
+        <https://example.org/ted-thesaurus/tag/sanitation>,
+        <https://example.org/ted-thesaurus/tag/surgery>,
+        <https://example.org/ted-thesaurus/tag/vaccines>,
+        <https://example.org/ted-thesaurus/tag/virus> ;
+    skos:prefLabel "health and medicine"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/scheme> a skos:ConceptScheme ;
+    skos:prefLabel "TED mini-thesaurus"@en .
+

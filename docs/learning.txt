@@ -1,0 +1,41 @@
+>> Phase 1: Create the tags Hierarchy
+
+1.1. src/build_vocab.py 
+- Steps: 
+    1. An LLM call to create a list of 20 broader concepts (roots of the hierarchy)
+    2. An LLM call to assign each real tag from documents to each broader concept 
+    3. Save tags+broader concepts into vocab/theasurus_draft.csv for human/AI review
+- Learning: 
+    1. Structured Output in LLM call using ollama.chat(format=schema) force LLM to answer in specific format.
+
+1.2. src/review_vocab.py
+- Steps:
+    1. An LLM call to review each tag and its broader concept and check it among other broader concepts to find 
+        whether current choice is best fit, otherwise suggest the better broader concept + reasoning
+    2. Save all suggestions into vocab/theasurus_reviewed.csv for human review
+- Learning
+    1. Tool Call: write functions and pass them to LLM call so it can use as an available 
+        tool ollama.chat(tools=[get_broader_concept, get_broader_concept_list])
+        Then execute all tools which LLM request in response of that chat and provide results with a new message 
+        which appends to the messages history so LLM have the history and the results and now can finish the first task.
+    2. Tool Call: LLM knows which tool it should use based on name and """""" comments inside the functions (avalabile tools).
+        So those comments should have a description of functionality and Args, outputs where aplicable.
+
+1.3. Human Review 
+- Steps:
+    1. I review vocab/theasurus_reviewed.csv and apply changes based on my jusdgment and save the final version in vocab/theasurus.csv
+
+1.4. export_skos.py
+- Steps: 
+    1. Convert vocab/theasurus.csv to vocab/ted_thesaurus.ttl
+- Learning:
+    1. SKOS: the standard format for thesauri. Four parts:
+        skos:Concept: a term.
+        skos:prefLabel: the term's name.
+        skos:broader / skos:narrower: the parent and child links.
+        skos:ConceptScheme: the thesaurus as a whole.
+
+
+
+
+
