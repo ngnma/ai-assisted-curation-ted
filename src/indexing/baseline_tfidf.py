@@ -22,11 +22,11 @@ from joblib import parallel_config
 
 
 
-# Fixed TF-IDF settings
+# TF-IDF settings
 TFIDF_FIXED = dict(sublinear_tf=True, stop_words="english", min_df=2, max_df=0.8, max_features=100_000)
 NGRAM_RANGES = [(1, 1), (1, 2)]
 
-# Fixed logistic regression settings
+# Logistic regression settings
 C_VALUES = [100, 300]
 CLASS_WEIGHTS = [None, "balanced"]
 
@@ -36,14 +36,26 @@ CLASS_WEIGHTS = [None, "balanced"]
 # CLASS_WEIGHTS = ["balanced"]
 
 
-# Fixed Top-k settings
-FIXED_K = list(range(1, 15))  # for tuning cut-off threshold
+# Top-k settings -> for tuning cut-off threshold
+FIXED_K = list(range(1, 15))  # method 1: fixed k
+THRESHOLDS = [0.01, 0.02, 0.05, 0.1, 0.5, 0.8]  # method 2: thresholding
+MIN_TAGS, MAX_TAGS = 1, 20  # thresholding: every talk gets at least 1 and at most 20 tags
 
 
 def rank_tags(proba: np.ndarray, classes: np.ndarray, k: int) -> list[list[str]]:
     """Top-k tag names per talk, highest probability first."""
     top = np.argsort(-proba, axis=1)[:, :k]
     return [list(classes[row]) for row in top]
+
+def select_by_threshold(proba: np.ndarray, classes: np.ndarray, threshold: float) -> list[list[str]]:
+    """Tags with probability >= threshold per talk, highest first (at least MIN_TAGS, at most MAX_TAGS)."""
+    order = np.argsort(-proba, axis=1)
+    selected = []
+    for row_proba, row_order in zip(proba, order):
+        n = int((row_proba >= threshold).sum())  # how many tags pass the threshold
+        n = min(max(n, MIN_TAGS), MAX_TAGS)
+        selected.append(list(classes[row_order[:n]]))
+    return selected
 
 def predict(ngram_range, C, class_weight, train_df, val_df) -> tuple[list[list[str]], MultiLabelBinarizer]:
     """Train TF-IDF + logistic regression on the training set and predict on the validation set."""
@@ -90,7 +102,7 @@ def tune(train_df, val_df, broader_of, bands) -> pd.DataFrame:
 
 def tune_cutoff_fixed_k(train_df, val_df, broader_of, bands, best_row) -> pd.DataFrame:
     """Tune cut-off threshold for top-k predictions on the validation set."""
-    
+
     gold_val = dict(zip(val_df["talk_id"], val_df["labels"]))
     results = []
     class_weight = None if pd.isna(best_row.class_weight) else best_row.class_weight
@@ -106,6 +118,25 @@ def tune_cutoff_fixed_k(train_df, val_df, broader_of, bands, best_row) -> pd.Dat
 
     return pd.DataFrame(results).sort_values("f1@k", ascending=False)
 
+def tune_cutoff_thresholding(train_df, val_df, broader_of, bands, best_row) -> pd.DataFrame:
+    """Tune cut-off threshold for top-k predictions on the validation set (method 2: thresholding)."""
+
+    gold_val = dict(zip(val_df["talk_id"], val_df["labels"]))
+    results = []
+    class_weight = None if pd.isna(best_row.class_weight) else best_row.class_weight
+    proba, classes = predict(ast.literal_eval(best_row.ngram_range), best_row.C, class_weight, train_df, val_df)
+
+    for threshold in THRESHOLDS:
+        selected = select_by_threshold(proba, classes, threshold)
+        scores = evaluate(dict(zip(val_df["talk_id"], selected)), gold_val, None, broader_of, bands)  # k=None: score each talk's whole set
+        row = {"cutoff_threshold": round(float(threshold), 2),
+               "avg_suggested_tags": round(float(np.mean([len(tags) for tags in selected])), 1)}
+        row.update(scores)
+        results.append(row)
+        print(f"threshold={row['cutoff_threshold']} -> f1@k={scores['f1@k']}, avg tags={row['avg_suggested_tags']}")
+
+    return pd.DataFrame(results).sort_values("f1@k", ascending=False)
+
 def main() -> None:
     print("Loading data...")
     data = load_indexing_data()
@@ -116,27 +147,35 @@ def main() -> None:
 
     out_dir = ROOT / "results"
     out_dir.mkdir(exist_ok=True)
-    out_file = out_dir / "tfidf_lr_tuning_val.csv"
+    tune_file = out_dir / "tfidf_lr_tuning_val.csv"
+    fixed_k_file = out_dir / "tfidf_lr_cutoff_val.csv"
+    threshold_file = out_dir / "tfidf_lr_threshold_val.csv"
 
     # tune hyperparameters of TF-IDF + logistic regression on the validation set
-    if not out_file.exists(): 
-        print(f"Tuning TF-IDF + logistic regression on the validation set (output: {out_file})...")
+    if not tune_file.exists(): 
+        print(f"Tuning TF-IDF + logistic regression on the validation set ...")
         tune_results = tune(train_df, val_df, broader_of, bands)
         tune_results.to_csv(out_dir / "tfidf_lr_tuning_val.csv", index=False)
     
+    # best TF-IDF + logistic regression settings (first row = highest ndcg@k)
+    best_row = pd.read_csv(tune_file).iloc[0]
+
     # tune cut-off threshold for top-k predictions on the validation set
     # method 1: fixed k
-    print("Tuning cut-off threshold for top-k predictions on the validation set...")
-    tune_results = pd.read_csv(out_file)
-    best_row = tune_results.iloc[0]
-    cutoff_results = tune_cutoff_fixed_k(train_df, val_df, broader_of, bands, best_row)
-    cutoff_results.to_csv(out_dir / "tfidf_lr_cutoff_val.csv", index=False)
+    if not fixed_k_file.exists(): 
+        print("Tuning cut-off threshold for top-k predictions on the validation set (method 1: fixed K)...")
+        cutoff_results = tune_cutoff_fixed_k(train_df, val_df, broader_of, bands, best_row)
+        cutoff_results.to_csv(fixed_k_file, index=False)
 
     # method 2: thresholding
-    print("Tuning cut-off threshold for top-k predictions on the validation set (method 2: thresholding)...")
+    if not threshold_file.exists():
+        print("Tuning cut-off threshold for top-k predictions on the validation set (method 2: thresholding)...")
+        threshold_results = tune_cutoff_thresholding(train_df, val_df, broader_of, bands, best_row)
+        threshold_results.to_csv(threshold_file, index=False)
 
 if __name__ == "__main__":
     main()
+
 
 
 

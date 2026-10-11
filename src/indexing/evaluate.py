@@ -47,22 +47,32 @@ def frequency_bands(train_labels: pd.Series) -> dict[str, str]:
             for tag, n in counts.items()}
 
 
-def evaluate(predictions: dict[str, list[str]], gold: dict[str, list[str]], k: int,
+def evaluate(predictions: dict[str, list[str]], gold: dict[str, list[str]], k: int | None,
              broader_of: dict[str, str] | None = None, bands: dict[str, str] | None = None) -> dict:
-    """Score ranked predictions against gold tags. Talks with no prediction count as empty."""
+    """Score ranked predictions against gold tags. Talks with no prediction count as empty (score 0).
+
+    k = a number: score the top k suggestions of every talk (fixed cut-off).
+    k = None:     score ALL suggestions of each talk, so k differs per talk (e.g. threshold cut-off).
+                  Precision/recall/F1 are then "set" scores; nDCG is not comparable with fixed-k nDCG.
+    """
     rows, wrong, near = [], 0, 0
     band_hits, band_total = Counter(), Counter()
 
     for talk_id, gold_tags in gold.items():
         g = set(gold_tags)
         pred = list(dict.fromkeys(predictions.get(talk_id, [])))  # drop repeated tags, keep order
-        p, r = precision_at_k(pred, g, k), recall_at_k(pred, g, k)
-        rows.append({"precision": p, "recall": r, "f1": 2 * p * r / (p + r) if p + r else 0.0,
-                     "ndcg": ndcg_at_k(pred, g, k)})
+        talk_k = len(pred) if k is None else k  # k=None -> use all suggestions of this talk
+
+        if talk_k == 0:  # no suggestions for this talk -> all scores 0 (avoids division by zero)
+            rows.append({"precision": 0.0, "recall": 0.0, "f1": 0.0, "ndcg": 0.0})
+        else:
+            p, r = precision_at_k(pred, g, talk_k), recall_at_k(pred, g, talk_k)
+            rows.append({"precision": p, "recall": r, "f1": 2 * p * r / (p + r) if p + r else 0.0,
+                         "ndcg": ndcg_at_k(pred, g, talk_k)})
 
         if broader_of:  # wrong tags that are "close" (same broader concept as a gold tag)
             gold_groups = {broader_of.get(t) for t in g}
-            for tag in pred[:k]:
+            for tag in pred[:talk_k]:
                 if tag not in g:
                     wrong += 1
                     near += broader_of.get(tag) in gold_groups
@@ -71,7 +81,7 @@ def evaluate(predictions: dict[str, list[str]], gold: dict[str, list[str]], k: i
             for tag in g:
                 band = bands.get(tag, "unseen in train")
                 band_total[band] += 1
-                band_hits[band] += tag in pred[:k]
+                band_hits[band] += tag in pred[:talk_k]
 
     scores = {f"{m}@k": round(v, 3) for m, v in pd.DataFrame(rows).mean().items()}
     if broader_of:
