@@ -137,6 +137,45 @@ def tune_cutoff_thresholding(train_df, val_df, broader_of, bands, best_row) -> p
 
     return pd.DataFrame(results).sort_values("f1@k", ascending=False)
 
+def tune_k(train_df, val_df, broader_of, bands, best_row, fixed_k_file, threshold_file) -> dict:
+    """Tune the cut-off on the validation set with both methods, compare them and return the best one.
+
+    Returns e.g. {"method": "fixed_k", "value": 8, "f1": 0.402, "avg_suggested_tags": 8}.
+    """
+    # method 1: fixed k
+    if not fixed_k_file.exists():
+        print("Tuning cut-off threshold for top-k predictions on the validation set (method 1: fixed K)...")
+        cutoff_results = tune_cutoff_fixed_k(train_df, val_df, broader_of, bands, best_row)
+        cutoff_results.to_csv(fixed_k_file, index=False)
+
+    # method 2: thresholding
+    if not threshold_file.exists():
+        print("Tuning cut-off threshold for top-k predictions on the validation set (method 2: thresholding)...")
+        threshold_results = tune_cutoff_thresholding(train_df, val_df, broader_of, bands, best_row)
+        threshold_results.to_csv(threshold_file, index=False)
+
+    # compare: best row of each method by F1 on validation
+    best_k = pd.read_csv(fixed_k_file).sort_values("f1@k", ascending=False).iloc[0]
+    best_t = pd.read_csv(threshold_file).sort_values("f1@k", ascending=False).iloc[0]
+
+    print("\n=== Cut-off comparison (validation) ===")
+    print(f"Method 1, fixed k:   k={int(best_k['k'])} -> f1@k={best_k['f1@k']}, "
+          f"precision@k={best_k['precision@k']}, recall@k={best_k['recall@k']}")
+    print(f"Method 2, threshold: threshold={best_t['cutoff_threshold']} -> f1@k={best_t['f1@k']}, "
+          f"precision@k={best_t['precision@k']}, recall@k={best_t['recall@k']}, "
+          f"avg tags={best_t['avg_suggested_tags']}")
+
+    # threshold must be strictly better; on a tie keep fixed k (simpler)
+    if best_t["f1@k"] > best_k["f1@k"]:
+        best = {"method": "threshold", "value": float(best_t["cutoff_threshold"]), "f1": float(best_t["f1@k"]),
+                "avg_suggested_tags": float(best_t["avg_suggested_tags"])}
+    else:
+        best = {"method": "fixed_k", "value": int(best_k["k"]), "f1": float(best_k["f1@k"]),
+                "avg_suggested_tags": int(best_k["k"])}
+    print(f"Best cut-off: {best['method']} = {best['value']} (f1@k={best['f1']})")
+    return best
+
+
 def main() -> None:
     print("Loading data...")
     data = load_indexing_data()
@@ -147,31 +186,21 @@ def main() -> None:
 
     out_dir = ROOT / "results"
     out_dir.mkdir(exist_ok=True)
-    tune_file = out_dir / "tfidf_lr_tuning_val.csv"
-    fixed_k_file = out_dir / "tfidf_lr_cutoff_val.csv"
-    threshold_file = out_dir / "tfidf_lr_threshold_val.csv"
+    tune_file = out_dir / "tfidf_lr_hparams_val.csv"
+    fixed_k_file = out_dir / "tfidf_lr_cutoff_topk_val.csv"
+    threshold_file = out_dir / "tfidf_lr_cutoff_threshold_val.csv"
 
     # tune hyperparameters of TF-IDF + logistic regression on the validation set
     if not tune_file.exists(): 
         print(f"Tuning TF-IDF + logistic regression on the validation set ...")
         tune_results = tune(train_df, val_df, broader_of, bands)
-        tune_results.to_csv(out_dir / "tfidf_lr_tuning_val.csv", index=False)
+        tune_results.to_csv(out_dir / "tfidf_lr_hparams_val.csv", index=False)
     
     # best TF-IDF + logistic regression settings (first row = highest ndcg@k)
     best_row = pd.read_csv(tune_file).iloc[0]
 
-    # tune cut-off threshold for top-k predictions on the validation set
-    # method 1: fixed k
-    if not fixed_k_file.exists(): 
-        print("Tuning cut-off threshold for top-k predictions on the validation set (method 1: fixed K)...")
-        cutoff_results = tune_cutoff_fixed_k(train_df, val_df, broader_of, bands, best_row)
-        cutoff_results.to_csv(fixed_k_file, index=False)
-
-    # method 2: thresholding
-    if not threshold_file.exists():
-        print("Tuning cut-off threshold for top-k predictions on the validation set (method 2: thresholding)...")
-        threshold_results = tune_cutoff_thresholding(train_df, val_df, broader_of, bands, best_row)
-        threshold_results.to_csv(threshold_file, index=False)
+    # tune the cut-off (how many tags to suggest) on the validation set
+    best_cutoff = tune_k(train_df, val_df, broader_of, bands, best_row, fixed_k_file, threshold_file)
 
 if __name__ == "__main__":
     main()
