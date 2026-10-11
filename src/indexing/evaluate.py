@@ -21,7 +21,7 @@ from collections import Counter
 
 import pandas as pd
 
-from src.config import EVAL_KS, SEED
+from src.config import EVAL_KS, SEED, ROOT
 from src.indexing.data import load_indexing_data, load_vocabulary
 
 
@@ -73,11 +73,11 @@ def evaluate(predictions: dict[str, list[str]], gold: dict[str, list[str]], k: i
                 band_total[band] += 1
                 band_hits[band] += tag in pred[:k]
 
-    scores = {f"{m}@{k}": round(v, 3) for m, v in pd.DataFrame(rows).mean().items()}
+    scores = {f"{m}@k": round(v, 3) for m, v in pd.DataFrame(rows).mean().items()}
     if broader_of:
-        scores[f"near_miss@{k}"] = round(near / wrong, 3) if wrong else None
+        scores[f"near_miss@k"] = round(near / wrong, 3) if wrong else None
     for band in sorted(band_total):
-        scores[f"recall@{k} {band}"] = round(band_hits[band] / band_total[band], 3)
+        scores[f"recall@k {band}"] = round(band_hits[band] / band_total[band], 3)
     return scores
 
 
@@ -105,6 +105,48 @@ def main() -> None:
         print(f"\n=== Test set, k={k} ===")
         print(pd.DataFrame(results).T.to_string())
 
+        out_dir = ROOT / "results"
+        out_dir.mkdir(exist_ok=True)
+        pd.DataFrame(results).T.reset_index().to_csv(out_dir / f"baselines_{k}_test.csv", index=False)
+
 
 if __name__ == "__main__":
     main()
+
+
+"""
+Sample call with Input/Output for evaluate():
+Inputs:
+
+predictions = {                       # talk_id -> ranked predicted tags (best first)
+    "talk_a": ["education", "technology", "teaching"],
+    "talk_b": ["brain", "music"],
+}
+
+gold = {                              # talk_id -> correct tags (order doesn't matter)
+    "talk_a": ["education", "children"],
+    "talk_b": ["brain", "dna"],
+}
+
+broader_of = {            # tag -> its parent group (from your thesaurus)
+    "education": "education and learning",
+    "teaching":  "education and learning",
+    "brain":     "health and medicine",
+    "dna":       "science and exploration",
+}
+
+bands = {                 # tag -> how common it is in training
+    "education": "frequent (100+)",
+    "teaching":  "medium (30-99)",
+    "dna":       "rare (<30)",
+}
+
+Call:
+scores = evaluate(predictions, gold, k=3, broader_of=broader_of, bands=bands)
+
+Output:
+{"precision@3": 0.333, "recall@3": 0.5, "f1@3": 0.4, "ndcg@3": 0.62,
+ "near_miss@3": 0.333,
+ "recall@3 frequent (100+)": 1.0, "recall@3 rare (<30)": 0.0, "recall@3 unseen in train": 0.5}
+
+"""

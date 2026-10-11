@@ -1,0 +1,4 @@
+index,precision@10,recall@10,f1@10,ndcg@10,near_miss@10,recall@10 frequent (100+),recall@10 medium (30-99),recall@10 rare (<30),recall@10 unseen in train
+perfect (gold tags),0.895,0.828,0.827,1.0,,0.752,0.774,0.751,0.719
+most common train tags,0.133,0.114,0.118,0.161,0.281,0.774,0.0,0.0,0.0
+random tags,0.032,0.027,0.028,0.032,0.338,0.027,0.028,0.025,0.062
