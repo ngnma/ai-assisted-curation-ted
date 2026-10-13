@@ -1,5 +1,9 @@
 """Phase 1 baseline: TF-IDF + one-vs-rest logistic regression.
-Step 1 here: tune settings on the validation set.
+
+1. Tune model settings on the validation set (ranked by ndcg@10).
+2. Tune the cut-off (fixed top-k or probability threshold) on the validation set (by F1).
+3. Retrain on train+val, evaluate ONCE on the test set, save results and test predictions.
+
 Run from the project root:  python -m src.indexing.baseline_tfidf
 """
 
@@ -40,6 +44,11 @@ CLASS_WEIGHTS = [None, "balanced"]
 FIXED_K = list(range(1, 15))  # method 1: fixed k
 THRESHOLDS = [0.01, 0.02, 0.05, 0.1, 0.5, 0.8]  # method 2: thresholding
 MIN_TAGS, MAX_TAGS = 1, 20  # thresholding: every talk gets at least 1 and at most 20 tags
+
+# Final evaluation and saving
+METHOD_NAME = "tfidf_logreg"
+RANKING_K = 10      # ranking quality on test is reported as ndcg@10 / recall@10 (same metric used for tuning)
+N_SAVED_TAGS = 20   # top tags (with scores) saved per test talk for error analysis
 
 
 def rank_tags(proba: np.ndarray, classes: np.ndarray, k: int) -> list[list[str]]:
@@ -99,14 +108,13 @@ def tune(train_df, val_df, broader_of, bands) -> pd.DataFrame:
             
     return pd.DataFrame(results).sort_values("ndcg@k", ascending=False)
 
-
-def tune_cutoff_fixed_k(train_df, val_df, broader_of, bands, best_row) -> pd.DataFrame:
+def tune_cutoff_fixed_k(train_df, val_df, broader_of, bands, best_param) -> pd.DataFrame:
     """Tune cut-off threshold for top-k predictions on the validation set."""
 
     gold_val = dict(zip(val_df["talk_id"], val_df["labels"]))
     results = []
-    class_weight = None if pd.isna(best_row.class_weight) else best_row.class_weight
-    proba, classes = predict(ast.literal_eval(best_row.ngram_range), best_row.C, class_weight, train_df, val_df)
+    class_weight = None if pd.isna(best_param.class_weight) else best_param.class_weight
+    proba, classes = predict(ast.literal_eval(best_param.ngram_range), best_param.C, class_weight, train_df, val_df)
     ranked = rank_tags(proba, classes, k=max(FIXED_K))
 
     for k in FIXED_K:
@@ -118,13 +126,13 @@ def tune_cutoff_fixed_k(train_df, val_df, broader_of, bands, best_row) -> pd.Dat
 
     return pd.DataFrame(results).sort_values("f1@k", ascending=False)
 
-def tune_cutoff_thresholding(train_df, val_df, broader_of, bands, best_row) -> pd.DataFrame:
+def tune_cutoff_thresholding(train_df, val_df, broader_of, bands, best_param) -> pd.DataFrame:
     """Tune cut-off threshold for top-k predictions on the validation set (method 2: thresholding)."""
 
     gold_val = dict(zip(val_df["talk_id"], val_df["labels"]))
     results = []
-    class_weight = None if pd.isna(best_row.class_weight) else best_row.class_weight
-    proba, classes = predict(ast.literal_eval(best_row.ngram_range), best_row.C, class_weight, train_df, val_df)
+    class_weight = None if pd.isna(best_param.class_weight) else best_param.class_weight
+    proba, classes = predict(ast.literal_eval(best_param.ngram_range), best_param.C, class_weight, train_df, val_df)
 
     for threshold in THRESHOLDS:
         selected = select_by_threshold(proba, classes, threshold)
@@ -137,7 +145,7 @@ def tune_cutoff_thresholding(train_df, val_df, broader_of, bands, best_row) -> p
 
     return pd.DataFrame(results).sort_values("f1@k", ascending=False)
 
-def tune_k(train_df, val_df, broader_of, bands, best_row, fixed_k_file, threshold_file) -> dict:
+def tune_k(train_df, val_df, broader_of, bands, best_param, fixed_k_file, threshold_file) -> dict:
     """Tune the cut-off on the validation set with both methods, compare them and return the best one.
 
     Returns e.g. {"method": "fixed_k", "value": 8, "f1": 0.402, "avg_suggested_tags": 8}.
@@ -145,13 +153,13 @@ def tune_k(train_df, val_df, broader_of, bands, best_row, fixed_k_file, threshol
     # method 1: fixed k
     if not fixed_k_file.exists():
         print("Tuning cut-off threshold for top-k predictions on the validation set (method 1: fixed K)...")
-        cutoff_results = tune_cutoff_fixed_k(train_df, val_df, broader_of, bands, best_row)
+        cutoff_results = tune_cutoff_fixed_k(train_df, val_df, broader_of, bands, best_param)
         cutoff_results.to_csv(fixed_k_file, index=False)
 
     # method 2: thresholding
     if not threshold_file.exists():
         print("Tuning cut-off threshold for top-k predictions on the validation set (method 2: thresholding)...")
-        threshold_results = tune_cutoff_thresholding(train_df, val_df, broader_of, bands, best_row)
+        threshold_results = tune_cutoff_thresholding(train_df, val_df, broader_of, bands, best_param)
         threshold_results.to_csv(threshold_file, index=False)
 
     # compare: best row of each method by F1 on validation
@@ -175,11 +183,81 @@ def tune_k(train_df, val_df, broader_of, bands, best_row, fixed_k_file, threshol
     print(f"Best cut-off: {best['method']} = {best['value']} (f1@k={best['f1']})")
     return best
 
+def apply_cutoff(proba: np.ndarray, classes: np.ndarray, best_cutoff: dict) -> list[list[str]]:
+    """Apply the tuned cut-off: fixed top-k or probability threshold."""
+    if best_cutoff["method"] == "fixed_k":
+        return rank_tags(proba, classes, int(best_cutoff["value"]))
+    return select_by_threshold(proba, classes, best_cutoff["value"])
+
+def retrain(train_df, val_df, test_df, broader_of, best_param, best_cutoff) -> tuple[dict, np.ndarray, np.ndarray]:
+    """Retrain with the tuned settings on train+val, then evaluate ONCE on the test set.
+
+    Returns (scores, test probabilities, tag names). Scores contain:
+    - set quality after the tuned cut-off (precision@k, recall@k, f1@k, ...): what a curator would receive
+    - ranking quality (ndcg@10, recall@10): the metric used to choose the model
+    """
+    train_val_df = pd.concat([train_df, val_df], ignore_index=True)
+    bands = frequency_bands(train_val_df["labels"])  # tag frequency in the data THIS model was trained on
+    gold_test = dict(zip(test_df["talk_id"], test_df["labels"]))
+
+    class_weight = None if pd.isna(best_param.class_weight) else best_param.class_weight
+    proba, classes = predict(ast.literal_eval(best_param.ngram_range), best_param.C, class_weight, train_val_df, test_df)
+
+    # set quality after the tuned cut-off (k=None for threshold: score each talk's whole set)
+    k = int(best_cutoff["value"]) if best_cutoff["method"] == "fixed_k" else None
+    suggested = apply_cutoff(proba, classes, best_cutoff)
+    scores = evaluate(dict(zip(test_df["talk_id"], suggested)), gold_test, k, broader_of, bands)
+
+    # ranking quality at a fixed depth
+    ranked = rank_tags(proba, classes, RANKING_K)
+    ranking = evaluate(dict(zip(test_df["talk_id"], ranked)), gold_test, RANKING_K)
+    scores[f"ndcg@{RANKING_K}"] = ranking["ndcg@k"]
+    scores[f"recall@{RANKING_K}"] = ranking["recall@k"]
+
+    print(f"Test set ({best_cutoff['method']}={best_cutoff['value']}): f1@k={scores['f1@k']}, "
+          f"precision@k={scores['precision@k']}, recall@k={scores['recall@k']} | "
+          f"ndcg@{RANKING_K}={scores[f'ndcg@{RANKING_K}']}")
+    return scores, proba, classes
+
+def save_results(scores: dict, best_param, best_cutoff: dict, n_talks: int, results_file) -> None:
+    """Add this method's test row to the shared comparison table (replaces an older row of the same method)."""
+    class_weight = None if pd.isna(best_param.class_weight) else best_param.class_weight
+    row = {
+        "method": METHOD_NAME,
+        "settings": f"ngram_range={best_param.ngram_range}, C={best_param.C}, class_weight={class_weight}",
+        "cutoff_method": best_cutoff["method"],
+        "cutoff_value": best_cutoff["value"],
+        "trained_on": "train+val",
+        "evaluated_on": "test",
+        "n_talks": n_talks,
+        **scores,
+    }
+    table = pd.DataFrame([row])
+    if results_file.exists():
+        old = pd.read_csv(results_file)
+        table = pd.concat([old[old["method"] != METHOD_NAME], table], ignore_index=True)
+    table.to_csv(results_file, index=False)
+    print(f"Saved test scores to {results_file}")
+
+def save_predictions(test_df, proba: np.ndarray, classes: np.ndarray, best_cutoff: dict, out_file) -> None:
+    """Save test predictions for error analysis: gold tags, suggested tags, and the top tags with scores."""
+    top = np.argsort(-proba, axis=1)[:, :N_SAVED_TAGS]
+    predictions = pd.DataFrame({
+        "talk_id": test_df["talk_id"],
+        "title": test_df["title"],
+        "gold_tags": test_df["labels"],
+        "suggested_tags": apply_cutoff(proba, classes, best_cutoff),  # after the cut-off: what a curator sees
+        "top_tags": [list(classes[row]) for row in top],             # top 20, best first
+        "top_scores": [[round(float(proba[i, j]), 4) for j in row] for i, row in enumerate(top)],
+    })
+    out_file.parent.mkdir(parents=True, exist_ok=True)
+    predictions.to_parquet(out_file, index=False)
+    print(f"Saved test predictions to {out_file}")
 
 def main() -> None:
     print("Loading data...")
     data = load_indexing_data()
-    train_df, val_df = data["train"], data["val"]
+    train_df, val_df, test_df = data["train"], data["val"], data["test"]
     vocab = load_vocabulary()
     broader_of = dict(zip(vocab["tag"], vocab["broader"]))
     bands = frequency_bands(train_df["labels"])
@@ -197,10 +275,18 @@ def main() -> None:
         tune_results.to_csv(out_dir / "tfidf_lr_hparams_val.csv", index=False)
     
     # best TF-IDF + logistic regression settings (first row = highest ndcg@k)
-    best_row = pd.read_csv(tune_file).iloc[0]
+    best_param = pd.read_csv(tune_file).iloc[0]
 
     # tune the cut-off (how many tags to suggest) on the validation set
-    best_cutoff = tune_k(train_df, val_df, broader_of, bands, best_row, fixed_k_file, threshold_file)
+    print(f"Tuning cut-off threshold for top-k predictions on the validation set ...")
+    best_cutoff = tune_k(train_df, val_df, broader_of, bands, best_param, fixed_k_file, threshold_file)
+        
+    # train on train+val, evaluate ONCE on the test set, save scores and predictions
+    print(f"Retraining on train+val and evaluating on test set ...")
+    scores, proba, classes = retrain(train_df, val_df, test_df, broader_of, best_param, best_cutoff)
+    save_results(scores, best_param, best_cutoff, len(test_df), out_dir / "indexing_results.csv")
+    save_predictions(test_df, proba, classes, best_cutoff, ROOT / "data" / "predictions" / f"{METHOD_NAME}_test.parquet")
+    
 
 if __name__ == "__main__":
     main()

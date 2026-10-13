@@ -1,0 +1,2 @@
+method,settings,cutoff_method,cutoff_value,trained_on,evaluated_on,n_talks,precision@k,recall@k,f1@k,ndcg@k,near_miss@k,recall@k frequent (100+),recall@k medium (30-99),recall@k rare (<30),recall@k unseen in train,ndcg@10,recall@10
+tfidf_logreg,"ngram_range=(1, 1), C=100, class_weight=balanced",fixed_k,8,train+val,test,365,0.502,0.364,0.403,0.568,0.631,0.652,0.29,0.137,0.0,0.551,0.413

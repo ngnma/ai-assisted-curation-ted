@@ -1,6 +1,6 @@
 >> Phase 0: Create the tags Hierarchy
 
-1.1. src/build_vocab.py 
+0.1. src/build_vocab.py 
 - Steps: 
     1. An LLM call to create a list of 20 broader concepts (roots of the hierarchy)
     2. An LLM call to assign each real tag from documents to each broader concept 
@@ -8,7 +8,7 @@
 - Learning: 
     1. Structured Output in LLM call using ollama.chat(format=schema) force LLM to answer in specific format.
 
-1.2. src/review_vocab.py
+0.2. src/review_vocab.py
 - Steps:
     1. An LLM call to review each tag and its broader concept and check it among other broader concepts to find 
         whether current choice is best fit, otherwise suggest the better broader concept + reasoning
@@ -21,11 +21,11 @@
     2. Tool Call: LLM knows which tool it should use based on name and """""" comments inside the functions (avalabile tools).
         So those comments should have a description of functionality and Args, outputs where aplicable.
 
-1.3. Human Review 
+0.3. Human Review 
 - Steps:
     1. I review vocab/theasurus_reviewed.csv and apply changes based on my jusdgment and save the final version in vocab/theasurus.csv
 
-1.4. export_skos.py
+0.4. export_skos.py
 - Steps: 
     1. Convert vocab/theasurus.csv to vocab/ted_thesaurus.ttl
 - Learning:
@@ -35,6 +35,14 @@
         skos:broader / skos:narrower: the parent and child links.
         skos:ConceptScheme: the thesaurus as a whole.
 
+Phase 1: Automatic subject indexing
+1.1. Logistic Regression + TF-IDF baseline
+- Steps:
+    1. Tune hyperparameters for LR and TF-IDF on train and evaluate on val
+    2. Tune cut-off for top-k tags which model shuold suggest with static and dynamic Ks. and find the best k on train and evaluate on val 
+    3. Retrain the final model with best params and k on train+val and evaluate on test. 
+    4. Store results of LR-TFIDF model to compare with other algorithms later
+    
 
 
 
