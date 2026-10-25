@@ -3,6 +3,11 @@ __pycache__/
 .venv/
 .ipynb_checkpoints/
 
+# Annif venv
+.venv-annif/
+annif/data/
+annif/corpus/
+
 # Data: not redistributed (licence) - download it with src/download_data.py
 data/
 

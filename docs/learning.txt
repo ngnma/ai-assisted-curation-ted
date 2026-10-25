@@ -36,12 +36,32 @@
         skos:ConceptScheme: the thesaurus as a whole.
 
 Phase 1: Automatic subject indexing
+This phase, choose best tags (around 8-10 tags per talk) for each talk based on the text, description and title of each talk. We implements different algorithms for that.
+
+1.0. Unified Evaluation script for all methods -> evaluate.py
+Steps:
+    1. The main() function which runs when you run the code itself creates results/baseline_10_test.csv which has all metrics for 3 basic baseline models: most_frequent_tags, all_correct, random_tags. We will compare these numbers with all models.
+    2. The evaluate() function is the core function we use for all models. It calculate F1@k, Precision@k, Recall@k and nDCG@k with bunch of other metrics for rare and near-miss tags.
+    3. Metrics:
+        Take one talk. Its correct (gold) tags are {education, children, teaching, science}, and the model’s top 5 are [education, technology, children, design, art]. Two of the five are correct.
+        Precision@5 = correct in the top 5 ÷ 5 = 2/5 = 0.40. Of what I suggested, how much was right?
+        Recall@5 = correct in the top 5 ÷ number of gold tags = 2/4 = 0.50. Of what I should have found, how much did I find?
+        nDCG@5 = how good your list is compared with the best possible list, where correct answers count more the higher up they are.
+            Each correct tag earns points depending on its position: position 1 earns 1.0, position 2 earns 0.63, position 3 earns 0.5, position 4 earns 0.43, and it keeps shrinking. That formula is 1 / log₂(position + 1).
+            Model’s score: education at position 1 (1.0) + children at position 3 (0.5) = 1.5.
+            Best possible score: all 4 gold tags in positions 1–4 = 1 + 0.63 + 0.5 + 0.43 = 2.56.
+            nDCG = 1.5 / 2.56 = 0.59.
+            “D” (discounted): lower positions are worth less.
+            “n” (normalised): you divide by the perfect list, so the score is always between 0 and 1.
+
 1.1. Logistic Regression + TF-IDF baseline
 - Steps:
     1. Tune hyperparameters for LR and TF-IDF on train and evaluate on val
     2. Tune cut-off for top-k tags which model shuold suggest with static and dynamic Ks. and find the best k on train and evaluate on val 
     3. Retrain the final model with best params and k on train+val and evaluate on test. 
     4. Store results of LR-TFIDF model to compare with other algorithms later
+
+1.2. Annif
     
 
 

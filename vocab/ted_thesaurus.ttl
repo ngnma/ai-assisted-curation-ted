@@ -931,7 +931,7 @@
     skos:prefLabel "money"@en .
 
 <https://example.org/ted-thesaurus/tag/morality> a skos:Concept ;
-    skos:broader <https://example.org/ted-thesaurus/group/Human_Behavior_and_Psychology> ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
     skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
     skos:prefLabel "morality"@en .
 
@@ -1096,7 +1096,7 @@
     skos:prefLabel "plastic"@en .
 
 <https://example.org/ted-thesaurus/tag/play> a skos:Concept ;
-    skos:broader <https://example.org/ted-thesaurus/group/Human_Behavior_and_Psychology> ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
     skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
     skos:prefLabel "play"@en .
 
@@ -1256,7 +1256,7 @@
     skos:prefLabel "senses"@en .
 
 <https://example.org/ted-thesaurus/tag/sex> a skos:Concept ;
-    skos:broader <https://example.org/ted-thesaurus/group/Human_Behavior_and_Psychology> ;
+    skos:broader <https://example.org/ted-thesaurus/group/human_behavior_and_psychology> ;
     skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
     skos:prefLabel "sex"@en .
 
@@ -1530,14 +1530,6 @@
     skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
     skos:prefLabel "youth"@en .
 
-<https://example.org/ted-thesaurus/group/Human_Behavior_and_Psychology> a skos:Concept ;
-    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
-    skos:narrower <https://example.org/ted-thesaurus/tag/morality>,
-        <https://example.org/ted-thesaurus/tag/play>,
-        <https://example.org/ted-thesaurus/tag/sex> ;
-    skos:prefLabel "Human Behavior and Psychology"@en ;
-    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
-
 <https://example.org/ted-thesaurus/group/history_and_heritage> a skos:Concept ;
     skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
     skos:narrower <https://example.org/ted-thesaurus/tag/ancient_world>,
@@ -1751,34 +1743,6 @@
     skos:prefLabel "art and creativity"@en ;
     skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
 
-<https://example.org/ted-thesaurus/group/human_behavior_and_psychology> a skos:Concept ;
-    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
-    skos:narrower <https://example.org/ted-thesaurus/tag/anthropology>,
-        <https://example.org/ted-thesaurus/tag/body_language>,
-        <https://example.org/ted-thesaurus/tag/brain>,
-        <https://example.org/ted-thesaurus/tag/choice>,
-        <https://example.org/ted-thesaurus/tag/cognitive_science>,
-        <https://example.org/ted-thesaurus/tag/complexity>,
-        <https://example.org/ted-thesaurus/tag/consciousness>,
-        <https://example.org/ted-thesaurus/tag/curiosity>,
-        <https://example.org/ted-thesaurus/tag/decision-making>,
-        <https://example.org/ted-thesaurus/tag/evolutionary_psychology>,
-        <https://example.org/ted-thesaurus/tag/illusion>,
-        <https://example.org/ted-thesaurus/tag/intelligence>,
-        <https://example.org/ted-thesaurus/tag/memory>,
-        <https://example.org/ted-thesaurus/tag/mind>,
-        <https://example.org/ted-thesaurus/tag/neuroscience>,
-        <https://example.org/ted-thesaurus/tag/personality>,
-        <https://example.org/ted-thesaurus/tag/psychology>,
-        <https://example.org/ted-thesaurus/tag/race>,
-        <https://example.org/ted-thesaurus/tag/senses>,
-        <https://example.org/ted-thesaurus/tag/sexual_violence>,
-        <https://example.org/ted-thesaurus/tag/sight>,
-        <https://example.org/ted-thesaurus/tag/slavery>,
-        <https://example.org/ted-thesaurus/tag/sound> ;
-    skos:prefLabel "human behavior and psychology"@en ;
-    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
-
 <https://example.org/ted-thesaurus/group/science_and_exploration> a skos:Concept ;
     skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
     skos:narrower <https://example.org/ted-thesaurus/tag/biology>,
@@ -1834,6 +1798,37 @@
         <https://example.org/ted-thesaurus/tag/water>,
         <https://example.org/ted-thesaurus/tag/weather> ;
     skos:prefLabel "environment and ecology"@en ;
+    skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
+
+<https://example.org/ted-thesaurus/group/human_behavior_and_psychology> a skos:Concept ;
+    skos:inScheme <https://example.org/ted-thesaurus/scheme> ;
+    skos:narrower <https://example.org/ted-thesaurus/tag/anthropology>,
+        <https://example.org/ted-thesaurus/tag/body_language>,
+        <https://example.org/ted-thesaurus/tag/brain>,
+        <https://example.org/ted-thesaurus/tag/choice>,
+        <https://example.org/ted-thesaurus/tag/cognitive_science>,
+        <https://example.org/ted-thesaurus/tag/complexity>,
+        <https://example.org/ted-thesaurus/tag/consciousness>,
+        <https://example.org/ted-thesaurus/tag/curiosity>,
+        <https://example.org/ted-thesaurus/tag/decision-making>,
+        <https://example.org/ted-thesaurus/tag/evolutionary_psychology>,
+        <https://example.org/ted-thesaurus/tag/illusion>,
+        <https://example.org/ted-thesaurus/tag/intelligence>,
+        <https://example.org/ted-thesaurus/tag/memory>,
+        <https://example.org/ted-thesaurus/tag/mind>,
+        <https://example.org/ted-thesaurus/tag/morality>,
+        <https://example.org/ted-thesaurus/tag/neuroscience>,
+        <https://example.org/ted-thesaurus/tag/personality>,
+        <https://example.org/ted-thesaurus/tag/play>,
+        <https://example.org/ted-thesaurus/tag/psychology>,
+        <https://example.org/ted-thesaurus/tag/race>,
+        <https://example.org/ted-thesaurus/tag/senses>,
+        <https://example.org/ted-thesaurus/tag/sex>,
+        <https://example.org/ted-thesaurus/tag/sexual_violence>,
+        <https://example.org/ted-thesaurus/tag/sight>,
+        <https://example.org/ted-thesaurus/tag/slavery>,
+        <https://example.org/ted-thesaurus/tag/sound> ;
+    skos:prefLabel "human behavior and psychology"@en ;
     skos:topConceptOf <https://example.org/ted-thesaurus/scheme> .
 
 <https://example.org/ted-thesaurus/group/society_and_culture> a skos:Concept ;
